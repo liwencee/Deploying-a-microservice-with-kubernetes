@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        REPO_URL = 'https://github.com/teciedesk/kubernetes-gitops-argocd.git'
+        REPO_URL = 'https://github.com/liwencee/Deploying-a-microservice-with-kubernetes.git'
     }
 
     stages {
@@ -44,7 +44,7 @@ pipeline {
                         if git diff --cached --quiet; then
                             echo "No changes to commit"
                         else
-                            git remote set-url origin https://${GIT_USER}:${GIT_PASS}@github.com/teciedesk/kubernetes-gitops-argocd.git
+                            git remote set-url origin https://${GIT_USER}:${GIT_PASS}https://github.com/liwencee/Deploying-a-microservice-with-kubernetes.git
                             git push origin main
                         fi
                     '''
